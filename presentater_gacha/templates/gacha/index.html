@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<form action="{% url 'top' %}" method="POST">{% csrf_token %}
+  <div>
+    <p class="my-2">
+      <label
+        class="text-4xl font-bold"
+        for="connpass_url">ガチャの対象となるconnpass参加者一覧のURLを入力</label>
+    </p>
+    <input
+      class="input input-bordered w-full my-2"
+      type="url"
+      id="connpass_url"
+      name="connpass_url"
+      placeholder="https://connpass.com/event/xxxxx/participation/#participants"
+      required>
+  </div>
+
+  <div class="w-full text-center">
+    <button
+      class="btn btn-outline btn-primary text-2xl w-40"
+      type="submit">ガチャる</button>
+  </div>
+</form>
+{% endblock %}

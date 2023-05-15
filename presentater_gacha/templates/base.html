@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja" data-theme="emerald">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'assets/index.css' %}">
+  <title>プレゼンテーターガチャ</title>
+</head>
+<body>
+  <header></header>
+  <main class="mx-40 my-16">
+  {% block main %}{% endblock %}
+  </main>
+  {% block footer %}{% endblock %}
+</body>
+</html>
